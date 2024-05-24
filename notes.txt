@@ -3,7 +3,7 @@ html,css,javascript,firebase api, mapbox gl JS, bootstrap 4 postGIS jumbo tron
 mapbox is similar to leaflet
 
 
-fire base link https://console.firebase.google.com/u/3/project/snapmap-gis/overview
+fire base link https://console.firebase.google.com/u/3/project/snapmap-gis/overview (authentication)
 
 mapbox https://account.mapbox.com/
 
@@ -33,4 +33,7 @@ timestamps
 24:59
 
 27:37
+
+32:47
+
 
