@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--custom css-->
     <link rel="stylesheet" href="assets/css/styles.css">
+<!--mapbox cdn-->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
 
     <!-- Boot strap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -60,6 +65,11 @@
 
 
     <!--Navbar end -->
+<div id ="not_logged_in">
+
+
+
+
 
 <!-- jumbotron start -->
     <div class="jumbotron jumbotron-fluid">
@@ -70,8 +80,8 @@
       </div>
 
 <div class = "row">
-    <div class ="col-lg-6 col-sm-12 col-md-12 form-card">
-
+    <div class ="col-lg-6 col-sm-12 col-md-12">
+<div class = "form-card">
         <p>This is a Sign In form</p>
         <form>
           <div class="form-group">
@@ -88,10 +98,12 @@
           </div>
           <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
+      </div>
     </div>
 
 
-    <div class ="col-lg-6 col-sm-12 col-md-12 form-card">
+    <div class ="col-lg-6 col-sm-12 col-md-12 ">
+      <div class = "form-card">
 
         <p>This is a Sign Up form</p>
         <form>
@@ -113,8 +125,20 @@
           </div>
           <button type="submit" class="btn btn-success">Sign up</button>
         </form>
-
+      </div>
     </div>
+</div>
+</div>
+<div id = "logged_in">
+  <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamltYm9qb25lczEyMyIsImEiOiJjbHdqemkxdXMxNjN1MmpsZWQyMnhpZWF4In0.xFj5mvD2KTm3K9VwF-mupw';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
+  
 </div>
 <!-- </div> -->
 <!-- jumbotron end -->
