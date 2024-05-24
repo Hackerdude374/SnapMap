@@ -1,7 +1,7 @@
 ## Tech Stack
 
 
-HTML, CSS, JS, Bootstrap, Fierebase
+HTML, CSS, JS, Bootstrap, Firebase,
 
 ## System Design 
 
