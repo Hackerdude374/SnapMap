@@ -3,6 +3,11 @@ html,css,javascript,firebase api, mapbox gl JS, bootstrap 4 postGIS
 mapbox is similar to leaflet
 
 
+fire base link https://console.firebase.google.com/u/3/project/snapmap-gis/overview
+
+mapbox https://account.mapbox.com/
+
+mapbox install/set up https://www.mapbox.com/install/javascript
 
 
 
@@ -12,4 +17,6 @@ timestamps
 9:51
 
 11:58
+
+13:20
 

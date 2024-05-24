@@ -1,3 +1,8 @@
+## Tech Stack
+
+
 HTML, CSS, JS, Bootstrap, Fierebase
 
-![alt text](image.png)
+## System Design 
+
+![alt text](image-1.png)
