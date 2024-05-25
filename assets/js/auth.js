@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 
 
@@ -12,25 +12,20 @@ $('#sign_up_form').submit(function(e){
     e.preventDefault()
     var email = document.querySelector('#sign_up_email').value
     var pwd1 = document.querySelector('#sign_up_pwd1').value
-    var pwd2 = document.querySelector('#sign_up_pwd2').value
+    var pwd2= document.querySelector('#sign_up_pwd2').value
 
-    if(pwd1 === pwd2){
-        
+    if (pwd1 == pwd2){
+        firebase.auth().createUserWithEmailAndPassword(email, pwd1).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            showAlert('sign_up_alerts','warning',errorMessage)
 
-        const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, pwd1)
-//   .then((userCredential) => {
-//     // Signed up 
-//     const user = userCredential.user;
-//     // ...
-//   })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-       
-    } else{
+            // ...
+          });
+
+    
+    } else {
         showAlert('sign_up_alerts','warning','Hi! The passwords are not matching!!')
     }
 })
