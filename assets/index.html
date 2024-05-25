@@ -10,8 +10,12 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
-
-
+<!-- firebase SDK
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script> -->
     <!-- Boot strap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>SnapMap</title>
@@ -150,6 +154,22 @@
 <!-- jumbotron end -->
 
 <!--firebase SDK/init-->
+<!-- OLD FIREBASE INIT  -->
+<!-- <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB8yVha_mbGanwWpWDWnJ0R88I0_54-ej8",
+    authDomain: "snapmap-gis.firebaseapp.com",
+    projectId: "snapmap-gis",
+    storageBucket: "snapmap-gis.appspot.com",
+    messagingSenderId: "849771840005",
+    appId: "1:849771840005:web:8c09c4651cf1b44aea926c",
+    measurementId: "G-W3867Q8YE0"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script> -->
+
+
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
@@ -189,7 +209,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script> 
   <!-- auth js file -->
-<script src="/assets/js/auth.js"></script>
+<!-- <script src="/assets/js/auth.js"></script> -->
 <!-- if above important doesnt work for sum reason -->
 <script src="js/auth.js"></script> 
 </body>

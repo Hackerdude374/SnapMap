@@ -11,6 +11,7 @@ mapbox install/set up https://www.mapbox.com/install/javascript
 
 https://getbootstrap.com/docs/4.6/components/alerts/
 
+firebase init code 
 
 
 -------------------------------------------------------------------------
@@ -38,4 +39,5 @@ timestamps
 
 34:49
 
+58:57
 
