@@ -51,12 +51,13 @@ $('#sign_up_form').submit(function(e){
 $('#sign_in_form').submit(function(e){
     e.preventDefault()
     var email = document.querySelector('#sign_in_email').value
-    var pwd1 = document.querySelector('#sign_in_pwd1').value
-    firebase.auth().createUserWithEmailAndPassword(email, pwd1).catch(function(error) {
+    var pwd1 = document.querySelector('#sign_in_pwd').value
+    firebase.auth().signInWithEmailAndPassword(email, pwd1).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        showAlert('sign_up_alerts','warning',errorMessage)
+        showAlert('sign_in_alerts','warning',errorMessage)
+
 
         // ...
       });
