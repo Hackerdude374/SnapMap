@@ -47,3 +47,17 @@ $('#sign_up_form').submit(function(e){
         showAlert('sign_up_alerts','warning','Hi! The passwords are not matching!!')
     }
 })
+
+$('#sign_in_form').submit(function(e){
+    e.preventDefault()
+    var email = document.querySelector('#sign_in_email').value
+    var pwd1 = document.querySelector('#sign_in_pwd1').value
+    firebase.auth().createUserWithEmailAndPassword(email, pwd1).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        showAlert('sign_up_alerts','warning',errorMessage)
+
+        // ...
+      });
+})
