@@ -8,13 +8,20 @@ function showAlert(div, type,msg){
 }
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-    //User signed in
+    //User signed in, show map, and  logged in
       var email = user.email;
       document.getElementById('logoutBtn').style.display = 'block'
+      document.getElementById('not_logged_in').style.display = 'none'
+      document.getElementById('logged_in').style.display = 'block'
+    
+      
+    mapinit()
       // ...
     } else {
         document.getElementById('logoutBtn').style.display = 'none'
-      // User is signed out
+        document.getElementById('not_logged_in').style.display = 'block'
+        document.getElementById('logged_in').style.display = 'map'
+      // User is signed out ^ dont show logged in or map
       // ...
     }
   });
