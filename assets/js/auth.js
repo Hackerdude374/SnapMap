@@ -6,7 +6,18 @@ function showAlert(div, type,msg){
     var putInDiv = document.getElementById(div)
     putInDiv.innerHTML ='<div class="alert alert-'+type+' alert-dismissible fade show" role="alert">'+msg+'<button type="button" class="close" data-dismiss="alert" aria-label="Close">  <span aria-hidden="true">&times;</span></button> </div>'
 }
-
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+    //User signed in
+      var email = user.email;
+      document.getElementById('logoutBtn').style.display = 'block'
+      // ...
+    } else {
+        document.getElementById('logoutBtn').style.display = 'none'
+      // User is signed out
+      // ...
+    }
+  });
 
 $('#sign_up_form').submit(function(e){
     e.preventDefault()
