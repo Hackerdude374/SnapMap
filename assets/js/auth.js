@@ -1,3 +1,7 @@
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+
+
 function showAlert(div, type,msg){
     var putInDiv = document.getElementById(div)
     putInDiv.innerHTML ='<div class="alert alert-'+type+' alert-dismissible fade show" role="alert">'+msg+'<button type="button" class="close" data-dismiss="alert" aria-label="Close">  <span aria-hidden="true">&times;</span></button> </div>'
@@ -13,12 +17,18 @@ $('#sign_up_form').submit(function(e){
     if(pwd1 === pwd2){
         
 
-        firebase.auth().createUserWithEmailAndPassword(email, pwd1).catch(function(error) {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // ..
-        });
-
+        const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, pwd1)
+//   .then((userCredential) => {
+//     // Signed up 
+//     const user = userCredential.user;
+//     // ...
+//   })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
        
     } else{
         showAlert('sign_up_alerts','warning','Hi! The passwords are not matching!!')
