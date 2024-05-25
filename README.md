@@ -1,7 +1,7 @@
 ## Tech Stack
 
 
-HTML, CSS, JS, Bootstrap, Firebase, Mapbox
+HTML, CSS, JS, Bootstrap, Firebase, Mapbox, Leaflet JS
 
 ## System Design 
 
