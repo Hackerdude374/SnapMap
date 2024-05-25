@@ -56,7 +56,7 @@ $('#sign_in_form').submit(function(e){
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        showAlert('sign_in_alerts','warning',errorMessage)
+        showAlert('sign_in_alerts','warning', errorMessage)
 
 
         // ...
