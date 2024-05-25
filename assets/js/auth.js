@@ -6,9 +6,9 @@ function showAlert(div, type,msg){
 
 $('#sign_up_form').submit(function(e){
     e.preventDefault()
-    var email = document.querySelector('#sign_up_email')
-    var pwd1 = document.querySelector('#sign_up_pwd1')
-    var pwd2 = document.querySelector('#sign_up_pwd2')
+    var email = document.querySelector('#sign_up_email').value
+    var pwd1 = document.querySelector('#sign_up_pwd1').value
+    var pwd2 = document.querySelector('#sign_up_pwd2').value
 
     if(pwd1 === pwd2){
         
