@@ -1,0 +1,11 @@
+https://ngrok.com/download
+
+cd /Users/bobby/Downloads
+
+./ngrok http 5500
+
+
+-------------fist add this----------------
+
+./ngrok config add-authtoken 2h1KwtMnfCq2m44Tlaa5akPdwBD_qAxWsPuDXBZzK13jh2ji
+
