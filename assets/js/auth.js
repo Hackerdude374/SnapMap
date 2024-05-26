@@ -62,3 +62,8 @@ $('#sign_in_form').submit(function(e){
         // ...
       });
 })
+
+
+function logoutUser(){
+  firebase.auth().signOut()
+}
