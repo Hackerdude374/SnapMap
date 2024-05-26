@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged((user) => {
     } else {
         document.getElementById('logoutBtn').style.display = 'none'
         document.getElementById('not_logged_in').style.display = 'block'
-        document.getElementById('logged_in').style.display = 'map'
+        document.getElementById('logged_in').style.display = 'none'
       // User is signed out ^ dont show logged in or map
       // ...
     }
