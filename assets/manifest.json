@@ -3,22 +3,22 @@
     "name":"SnapMap Inc",
     "description":"A PWA which enables you to share photos with friends around the world!",
     "icons":[{
-        "src":"/assets/icons/icon-144.pmg",
+        "src":"icons/icon-144.png",
         "type":"image/png",
         "sizes": "144x144"
     },
     {
-        "src":"/assets/icons/icon-114.pmg",
+        "src":"icons/icon-114.png",
         "type":"image/png",
         "sizes": "114x114"
     },
     {
-        "src":"/assets/icons/icon-192.pmg",
+        "src":"icons/icon-192.png",
         "type":"image/png",
         "sizes": "192x192"
     },
     {
-        "src":"/assets/icons/icon-96.pmg",
+        "src":"icons/icon-96.png",
         "type":"image/png",
         "sizes": "96x96"
     }
