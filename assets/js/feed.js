@@ -61,7 +61,7 @@ function submitPost(location){
         task.then(snapshot => snapshot.ref.getDownloadURL())
         .then(url=> {
             console.log(url)
-            fetch('gs://snapmap-gis.appspot.com/feed.json',{
+            fetch('https://snapmap-gis-default-rtdb.firebaseio.com/feed.json',{
                 method: 'POST',
                 headers :{
                     'Content-type' : 'application/json',
