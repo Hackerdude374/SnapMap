@@ -76,7 +76,7 @@ function submitPost(location){
                 })
                 .then(function(res){
                     console.log('entry added')
-                    var cts  = canvas.getContext('2d')
+                    var ctx  = canvas.getContext('2d')
                     ctx.clearRect(0,0,240,320)
                     document.getElementById('feeling').value = ''
                     document.getElementById('position_info').innerHTML = ''
