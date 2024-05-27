@@ -1,7 +1,7 @@
 var canvas = document.getElementById('capturedImg')
 var userLocation
 var geoRecall = true
-var progressbar = document.getElementById('imgprogressbar')
+var progressbar = document.getElementById('imgprogressbar');
 
 function addimgtocanvas(e){
     var reader = new FileReader()
@@ -42,11 +42,27 @@ function getlocagain(){
 function getlocation(){
     navigator.geolocation.getCurrentPosition(showPosition, positionError)
 }
-
 function submitPost(location){
-    canvas.toBlob(blob =>{
+    canvas.toBlob(blob => {
         var name = currentUsersemail + new Date().toISOString()
-        var storeRef = firebase.storage().ref('feed/')
+        var storeRef = firebase.storage().ref('feed/'+ name)
+
+        var task = storeRef.put(blob)
+        progressbar.parentElement.style.display = 'flex'
+        task.on('state_changed',function(snapshot){
+            var percent = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            progressbar.style.width = percent + '%'
+        }, function( err){
+            console.log(err)
+        },function complete(){
+            progressbar.parentElement.style.display = 'none'
+            progressbar.style.width = '0%'
+        })
+        task.then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url=> {
+            console.log(url)
+            fetch('gs://snapmap-gis.appspot.com/feed.json')
+        })
     })
 }
 
