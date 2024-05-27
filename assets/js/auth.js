@@ -16,6 +16,7 @@ firebase.auth().onAuthStateChanged((user) => {
     
       
     mapinit()
+    installalert()
       // ...
     } else {
         document.getElementById('logoutBtn').style.display = 'none'
@@ -66,4 +67,11 @@ $('#sign_in_form').submit(function(e){
 
 function logoutUser(){
   firebase.auth().signOut()
+}
+
+function installalert(){
+  if(deferredPrompt){
+    deferredPrompt.prompt()
+    deferredPrompt = null 
+  }
 }
