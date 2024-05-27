@@ -10,3 +10,5 @@ HTML, CSS, JS, Bootstrap, Firebase, Mapbox, Leaflet JS, NgRok
 ## How to Use
 
 Run the index.html with liveserver
+
+open vscode and click on "snapmapgit" directory
