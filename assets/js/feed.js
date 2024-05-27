@@ -1,6 +1,7 @@
 var canvas = document.getElementById('capturedImg')
 var userLocation
 var geoRecall = true
+var progressbar = document.getElementById('imgprogressbar')
 
 function addimgtocanvas(e){
     var reader = new FileReader()
@@ -23,6 +24,7 @@ function showPosition(position){
         latitude: position.coords.latitude
     }
     console.log("userLocation from feed.js :", userLocation)
+    submitPost(userLocation)
     geoRecall = false
 
 }
@@ -39,5 +41,12 @@ function getlocagain(){
 }
 function getlocation(){
     navigator.geolocation.getCurrentPosition(showPosition, positionError)
+}
+
+function submitPost(location){
+    canvas.toBlob(blob =>{
+        var name = currentUsersemail + new Date().toISOString()
+        var storeRef = firebase.storage().ref('feed/')
+    })
 }
 
