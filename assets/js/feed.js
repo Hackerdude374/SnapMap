@@ -7,9 +7,10 @@ function addimgtocanvas(e){
         var img = new Image()
         img.onload = function(){
             var ctx = canvas.getContext('2d')
-            ctx.drawimage(img, 0,0,240,320)
+            ctx.drawImage(img, 0,0,240,320)
         }
         img.src = event.target.result
     }
     reader.readAsDataURL(e.files[0])
 }
+
