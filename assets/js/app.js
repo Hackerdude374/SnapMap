@@ -1,3 +1,6 @@
+var deferredPrompt;
+
+
 if('serviceWorker' in navigator){
     console.log('sw can be installed')
     navigator.serviceWorker
@@ -9,3 +12,9 @@ if('serviceWorker' in navigator){
         console.log('error while registering serviceWorker', err)
     })
 }
+
+window.addEventListener('beforeinstallprompt', function(event){
+    event.preventDefault()
+    deferredPrompt = event
+    return false
+})
