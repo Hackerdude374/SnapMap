@@ -61,8 +61,30 @@ function submitPost(location){
         task.then(snapshot => snapshot.ref.getDownloadURL())
         .then(url=> {
             console.log(url)
-            fetch('gs://snapmap-gis.appspot.com/feed.json')
+            fetch('gs://snapmap-gis.appspot.com/feed.json',{
+                method: 'POST',
+                headers :{
+                    'Content-type' : 'application/json',
+                    'Accept': 'application/json'
+                },body:JSON.stringify({
+                    "email":currentUsersemail,
+                    "status": document.getElementById('feeling').value,
+                    "image": url,
+                    "location":location,
+                    "time": new Date().toISOString()
+                })
+                })
+                .then(function(res){
+                    console.log('entry added')
+                    var cts  = canvas.getContext('2d')
+                    ctx.clearRect(0,0,240,320)
+                    document.getElementById('feeling').value = ''
+                    document.getElementById('position_info').innerHTML = ''
+                    $('#newentry').modal('hide')
+                })
+                .catch(function(err){
+                    console.log(err)
+                })
+            })
         })
-    })
-}
-
+    }
