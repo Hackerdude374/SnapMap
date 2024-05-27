@@ -6,10 +6,13 @@ function showAlert(div, type,msg){
     var putInDiv = document.getElementById(div)
     putInDiv.innerHTML ='<div class="alert alert-'+type+' alert-dismissible fade show" role="alert">'+msg+'<button type="button" class="close" data-dismiss="alert" aria-label="Close">  <span aria-hidden="true">&times;</span></button> </div>'
 }
+
+var currentUsersemail
+
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
     //User signed in, show map, and  logged in
-      var email = user.email;
+      currentUsersemail = user.email;
       document.getElementById('logoutBtn').style.display = 'block'
       document.getElementById('not_logged_in').style.display = 'none'
       document.getElementById('logged_in').style.display = 'block'
