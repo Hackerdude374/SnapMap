@@ -9,3 +9,6 @@ cd /Users/bobby/Downloads
 
 ./ngrok config add-authtoken 2h1KwtMnfCq2m44Tlaa5akPdwBD_qAxWsPuDXBZzK13jh2ji
 
+--------------app link\
+ https://73f8-173-68-87-8.ngrok-free.app
+ 
