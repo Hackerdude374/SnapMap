@@ -22,3 +22,7 @@ click hosting and github deploys (space bar to choose it then enter)
 use an existing project
 
 snapmap-gis
+
+WEBSITE LINK
+
+https://snapmap-gis.web.app
