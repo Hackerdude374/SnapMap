@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "firebase-admin": "^12.1.1"
+  },
+  "name": "snapmapgit",
+  "description": "HTML, CSS, JS, Bootstrap, Firebase, Mapbox, Leaflet JS, NgRok",
+  "version": "1.0.0",
+  "main": "sw.js",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
