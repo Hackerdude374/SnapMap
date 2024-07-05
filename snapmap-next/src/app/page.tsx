@@ -11,6 +11,7 @@ import { User } from "firebase/auth";
 
 export default function Home() {
   const [user, setUser] = useState<User | null>(null);
+  const [showPostForm, setShowPostForm] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -21,14 +22,28 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="relative w-full h-screen">
       {user ? (
         <>
           <Map />
-          <PostForm />
+          <button
+            onClick={() => setShowPostForm(true)}
+            className="fixed right-4 bottom-4 bg-green-500 text-white p-4 rounded-full shadow-lg"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          {showPostForm && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white p-4 rounded-lg">
+                <PostForm onClose={() => setShowPostForm(false)} />
+              </div>
+            </div>
+          )}
         </>
       ) : (
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 justify-center items-center h-full">
           <SignIn />
           <SignUp />
         </div>

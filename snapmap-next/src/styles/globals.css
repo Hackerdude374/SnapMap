@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: black;
+  background-color: white;
+}
