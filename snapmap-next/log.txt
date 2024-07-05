@@ -1,0 +1,5 @@
+Need feeditem tsx working properly.
+Login/signup works.
+Map shows up..
+Need ping markers and hopefully our stuff shows. 
+Then we will be done..
